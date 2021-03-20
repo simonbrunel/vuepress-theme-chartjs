@@ -1,0 +1,33 @@
+{
+  "name": "vuepress-theme-chartjs",
+  "description": "VuePress theme for projects in the Chart.js organization.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext .js,.vue"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonbrunel/vuepress-theme-chartjs.git"
+  },
+  "keywords": [
+    "vuepress",
+    "theme",
+    "chartjs"
+  ],
+  "homepage": "https://github.com/simonbrunel/vuepress-theme-chartjs#readme",
+  "dependencies": {
+    "acorn": "^8.1.0",
+    "vue-prism-editor": "^1.2.2",
+    "vue2-perfect-scrollbar": "^1.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.22.0",
+    "eslint-config-chartjs": "^0.3.0",
+    "eslint-plugin-vue": "^7.7.0"
+  },
+  "peerDependencies": {
+    "chart.js": ">= 2"
+  }
+}

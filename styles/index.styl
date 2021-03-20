@@ -1,0 +1,44 @@
+@import 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css'
+@import '~vue2-perfect-scrollbar/dist/vue2-perfect-scrollbar.css'
+
+@import 'palette.styl'
+
+a
+  svg.icon.outbound
+    margin-left 2px
+
+  img + span > svg.icon.outbound
+    display none
+
+sup
+  font-size 0.75em !important
+
+a code
+  color $accentColor important !important
+
+.navbar
+  box-shadow 0 4px 4px -4px rgba(black, 0.15)
+
+  .logo
+    margin-right: 0.5rem !important
+
+  .site-name
+    font-size 1.25rem !important
+
+  .repo-link
+    margin-left 1rem !important
+
+.ps
+  .ps__rail-x:hover, .ps__rail-y:hover,
+  .ps__rail-x:focus, .ps__rail-y:focus,
+  .ps__rail-x.ps--clicking, .ps__rail-y.ps--clicking
+    background-color transparent
+
+.prism-editor__textarea:focus
+  outline none
+
+.text-muted
+  opacity 0.5 !important
+
+.text-error
+  color $dangerColor !important
