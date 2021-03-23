@@ -1,0 +1,22 @@
+# https://docs.github.com/actions/reference/workflow-syntax-for-github-actions
+
+name: Publish
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish-to-npm:
+    if: github.repository_owner == 'simonbrunel'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
