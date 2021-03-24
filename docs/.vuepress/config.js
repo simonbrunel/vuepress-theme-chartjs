@@ -8,10 +8,11 @@ module.exports = {
   ],
   themeConfig: {
     repo: 'simonbrunel/vuepress-theme-chartjs',
+    docsBranch: 'main',
+    docsDir: 'docs',
+    editLinks: true,
     logo: '/favicon.png',
     lastUpdated: 'Last Updated',
-    editLinks: true,
-    docsDir: 'docs',
     chart: {
       imports: [
         ['.imports/register.js'],
