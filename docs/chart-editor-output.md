@@ -8,15 +8,19 @@ Output can be enabled to show `console.log()` calls in a separate tab.
 
 ## Usage
 
+The *output* can be enabled using: `module.exports.output: true | string`. If `output` is a
+`string`, the text will be used as placeholder as long as there is no log. If `true`, a
+default placeholder is used (i.e. `...`).
+
 ````md
 ```js
-export.default = {
+module.exports = {
   output: true,
 }
 
 // or
 
-export.default = {
+module.exports = {
   output: 'Text to display when there is no output',
 }
 ```

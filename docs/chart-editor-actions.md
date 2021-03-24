@@ -8,14 +8,16 @@ Actions allow users to manually trigger custom logic.
 
 ## Usage
 
+*Actions* can be defined using: `module.exports.actions: object[]`.
+
 ````md
 ```js
 module.exports = {
   actions: [
     {
-      name: 'Action Name',
-      handler(chart) {
-        // Do something with chart...
+      name: 'Action Name',        // Text to display on the associated button.
+      handler(chart: Chart) {     // Function to call when the button is clicked.
+        // ...
       }
     }
   ]

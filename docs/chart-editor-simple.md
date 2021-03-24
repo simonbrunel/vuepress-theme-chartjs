@@ -8,11 +8,22 @@ Simple chart editor that displays the entire JavaScript code.
 
 ## Usage
 
+The Chart *config* is **required** and must be exported as: `module.exports.config: object`.
+
 ````md
 ```js chart-editor
-  [ code ]
+module.exports = {
+  config: {
+    // ...
+  }
+}
 ```
 ````
+
+::: tip NOTE
+See the [Chart.js documentation](http://chartjs.org/docs/latest/configuration) for details
+about the expected object.
+:::
 
 ## Demo
 

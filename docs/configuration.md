@@ -7,7 +7,7 @@ Additionally, the following options are available:
 ```js
 // docs/.vuepress/config.js
 
-module.export = {
+module.exports = {
   themeConfig: {
     // Chart views options.
     chart: {

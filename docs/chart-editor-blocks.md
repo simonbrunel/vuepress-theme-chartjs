@@ -8,6 +8,8 @@ Blocks provides a way to display specific parts of the code in separate tabs.
 
 ## Usage
 
+Each *block* starts and ends with a line (or block) JavaScript comment.
+
 ````md
 ```js chart-editor
 // <block:{name}:{order}>
