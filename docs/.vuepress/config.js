@@ -13,6 +13,7 @@ module.exports = {
     editLinks: true,
     logo: '/favicon.png',
     lastUpdated: 'Last Updated',
+    searchPlaceholder: 'Search...',
     chart: {
       imports: [
         ['.imports/register.js'],

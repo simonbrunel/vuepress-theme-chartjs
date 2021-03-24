@@ -31,6 +31,11 @@
     .nav-links
       margin-left 1rem
 
+      // The repo-link have a margin which is useless
+      // when it's the only item in the nav-links.
+      :first-child
+        margin-left 0
+
       .nav-link
         &:not(.external)
           border-bottom-width 4px
@@ -54,10 +59,8 @@
       width initial
 
   .search-box
-    margin-right 1rem
-
     input
-      background-color #fafafa
+      background-color #f4f4f4
       background-position 0.75rem 0.55rem
       border-radius 8px
       border-color transparent
@@ -65,13 +68,21 @@
       padding-left 2.2rem
       height 2.2rem
 
+      &:hover
+        border-color rgba(black, 0.2)
+        background-color #fff
+
+      &:focus
+        border-color rgba($accentColor, 0.8)
+        background-color #fff
+
   .sidebar
     border-right 1px dashed #eee
 
     .sidebar-link
     .sidebar-heading
       transition border-color .25s
-      padding: 0.35rem 1.475rem
+      padding 0.35rem 1.475rem
 
       &.active
         font-weight bold
@@ -156,3 +167,9 @@
 
   sup
     font-size 0.75em !important
+
+  // Make sure to keep the external link icon aligned with the
+  // text on small screen so it doesn't sit alone on a new line.
+  td > a
+    align-items center
+    display inline-flex
