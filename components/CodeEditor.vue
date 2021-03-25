@@ -121,17 +121,17 @@ export default {
     rebuild() {
       try {
         const me = this;
-        const blocks = this.parse(this.value).filter(({name}) => !!name);
-
-        if (!blocks.length) {
-          blocks.push({
-            code: this.value.trim(),
+        const blocks = this.parse(this.value);
+        const namedBlocks = blocks.filter(({name}) => !!name);
+        if (!namedBlocks.length) {
+          namedBlocks.push({
+            code: this.value,
             name: 'JS',
             order: 0,
           });
         }
 
-        const sections = blocks
+        const sections = namedBlocks
           .sort((v0, v1) => v0.order - v1.order)
           .map((block) => ({
             component: EditorTextarea,
@@ -184,7 +184,7 @@ export default {
       }, delay);
     },
     update() {
-      this.$emit('input', this.blocks.map(({code}) => code).join(''));
+      this.$emit('input', this.blocks.map((d) => d.code).join(''));
     },
     parse(value) {
       const blocks = [];
