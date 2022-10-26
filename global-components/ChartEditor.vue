@@ -1,14 +1,19 @@
 <template>
   <div class="chart-editor">
+    <span>
+      chartOnly: {{ chartOnly }}
+    </span>
     <chart-view
       ref="chart-view"
       :config="config"
     />
     <chart-actions
+      v-if="!chartOnly"
       :actions="actions"
       @action="execute"
     />
     <code-editor
+      v-if="!chartOnly"
       :error.sync="error"
       :messages="messages"
       :output="output"
@@ -46,6 +51,7 @@ export default {
     error: null,
     messages: [],
     output: false,
+    chartOnly: false
   }),
 
   watch: {
@@ -101,6 +107,7 @@ export default {
         const exports = new Function(script)(context);
         const config = exports.config || null;
         this.output = exports.output || false;
+        this.chartOnly = exports.chartOnly || false;
 
         if (!this.actions) {
           this.actions = exports.actions || null;
