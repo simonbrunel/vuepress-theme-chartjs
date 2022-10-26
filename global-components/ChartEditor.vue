@@ -1,8 +1,5 @@
 <template>
   <div class="chart-editor">
-    <span>
-      chartOnly: {{ chartOnly }}
-    </span>
     <chart-view
       ref="chart-view"
       :config="config"
